@@ -1,0 +1,39 @@
+
+<h1 class="text-center">Eat-Da-Burger!</h1>
+<h2 class="ml-5 text-center">Burger Eating Contest</h2>
+
+<ul>
+  {{#each burgers}}
+  {{#unless devoured}}
+  {{> burgers/burger-block devoured=true}}
+  {{/unless}}
+  {{/each}}
+</ul>
+
+<h2 class="text-center ml-5">Burger's You've Eaten</h2>
+
+<ul>
+  {{#each burgers}}
+  {{#if devoured}}
+  {{> burgers/burger-block devoured=false}}
+  {{/if}}
+  {{/each}}
+</ul>
+
+
+<div class="card-body ml-5">
+  <div class="card text-center">
+
+    <h2 class="card-title">Add A Burger</h2>
+    <form class="create-form">
+
+      <div class="form-group">
+        <label class="font-weight-bold" for="burger">Burger Name:</label>
+        <input type="text" id="ca" name="name">
+      </div>
+      <button class="btn btn-primary" type="submit">Add Burger</button>
+    </form>
+  </div>
+
+</div>
+© 2020 GitHub, Inc.
